@@ -2,33 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Pho3nix-Element</title>
+    <title>pho3nix-product</title>
+    <link href="https://fonts.googleapis.com/css?family=Khula|Playfair+Display+SC&display=swap" rel="stylesheet">
     <style>
-      body {
-        margin: 0;
+      html, body {
         padding: 0;
-        font-family: Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-        line-height: 1.5;
-        min-height: 100vh;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      body {
+        background: linear-gradient(135deg, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
         display: flex;
         flex-direction: column;
-        background: #555;
+        justify-content: space-around;
+        align-items: center;
       }
-      pho3nix-element {
-        --bg-color: white;
+      pho3nix-product {
+        --h1-font-family: 'Playfair Display SC', serif;
+        --h1-font-size: 16pt;
+        --h1-color: white;
+        --h1-align: center;
+        --h1-bg-color: red;
+        --h1-font-variant: small-caps;
+        --h2-font-family: 'Khula', sans-serif;
+        --h2-font-size: 12pt;
+        --h2-font-color: grey;
+        --h2-font-variant: small-caps;
+        --h3-font-family: 'Khula', sans-serif;
+        --h3-font-size: 12pt;
+        --h3-font-color: black;
+        --h3-font-variant: initial;
+        --h3-text-transform: uppercase;
+        --img-initial-zoom: 100%;
+        --img-bg: linear-gradient(to bottom, rgba(255,255,255,0), #ee9ca7, rgba(255,255,255,0));
+        --image-zoom-level: 175%;
+        --red: red;
+        --black: black;
+        --white: white;
+        --color-icon-border-color: rgba(255,255,255,.6);
+        --color-icon-border-color-hover: rgba(255,255,255,.4);
       }
     </style>
   </head>
   <body>
-    <pho3nix-element></pho3nix-element>
+    <pho3nix-product name="Nicci" category="Overál" price="9900 HUF" img="/images/test.png" favored>
+        <a class="red"> </a>
+        <a class="black"> </a>
+        <a class="white"> </a>
+    </pho3nix-product>
     <noscript>
       Please enable JavaScript to view this website.
     </noscript>
     <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script type="module">
-      import '/src/pho3nix-element.js';
-      // import '/build/esm-bundled/src/pho3nix-element.js'
+      import '/src/pho3nix-product.js';
+      // import '/build/esm-bundled/src/pho3nix-product.js'
     </script>
   </body>
 </html>
